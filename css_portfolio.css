@@ -1,0 +1,61 @@
+body {
+    background-color: #427D71
+}
+/* de kop word rond gemaakt door de code border-radius, dit is van de volgende website gehaalt: https://bobdewebbouwer.com/ronde-hoeken-css-3/ */
+/* ik liep op het probleem dat mijn afbeelding en knoppen niet goed werden uitgelijnd. om te vinden waar het probleem zat en om dit op te lossen heb ik copilet gebruikt, hieruit bleek dat ik de zelfde functies 
+als bij #middenknoppenindekop kon gebruiken .*/
+.kop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #30545C;
+    width: auto; 
+    border-radius: 40px; 
+}
+div{
+    margin: 5px;
+    border-radius: 40px; 
+}
+
+#logo {
+    margin-right:20px;
+    
+}
+/* om de buttons van de kop goed te plaatsen zijn de volgende paginas van w3schools gebruikt: w3schools.com/cssref/css_entities.php en https://www.w3schools.com/cssref/css3_pr_justify-content.php 
+en de lijn margin: 0 auto; komt van https://www.w3schools.com/css/css_margin.asp*/
+#middenknoppenindekop {
+    margin: 0 auto;
+    margin-left: 400px;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+button {
+    background-color: transparent;
+    border-color: transparent;
+    color: #DBDCD1;
+    font-family: "Oswald";
+    font-size: 30px;
+    
+
+
+}
+/* om de kleur van de link te veranderen https://www.w3schools.com/Css/css_link.asp*/
+a:link {
+    color: #DBDCD1;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #C9E9F1;
+  }
+  
+
+  /*css voor de homepagina*/
+  .vak1home {
+    background-color: #30545C;
+    width: auto; 
+    height: auto;
+  }
