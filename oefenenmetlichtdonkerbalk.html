@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html>
+    <!--het maken van een licht donkerbalk met behulp van https://www.w3schools.com/tags/att_input_type_checkbox.asp en https://www.w3schools.com/howto/howto_css_switch.asp en https://www.w3schools.com/howto/howto_js_rangeslider.asp-->
+    <head>
+
+        <style>
+  body{
+    background-color: blue;
+  }
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100px; /* Full-width */
+  height: 25px; /* Specified height */
+  background: lightblue; /* Grey background */
+  -webkit-transition: .2s; 
+  transition: .2s;
+  border-radius: 34px;
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: rgb(122, 119, 119); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 34px;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.donker {
+      margin: 0;
+      height: 100vh;
+      background: #000; /* Nachtmodus achtergrond */
+      color: #fff;
+      overflow: hidden;
+      position: relative;
+    }
+    .light {
+      position: absolute;
+      width: 150px; /* Grootte van de zaklamp */
+      height: 150px;
+      background: radial-gradient(circle, rgba(255,255,255,1) 50%, rgba(0,0,0,0) 100%);
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+    }
+
+
+        </style>
+    </head>
+    <body class="donker">
+    
+        
+            
+
+
+       
+        <div class="slidecontainer">
+            <input type="range" min="0" max="2" step="1" value="1" class="slider" id="myRange">
+            <p id="demo"></p>
+        </div>
+        <div class="light" id="light"></div>
+        
+
+    </body>
+    <script>
+        let schuif = document.getElementById("myRange");
+        let output = document.getElementById("demo");
+    
+        // Update de tekst van output
+        schuif.oninput = function() {
+            output.innerHTML = this.value;
+            
+            // Controleer op waarde 0
+            if (this.value == 0) {
+                document.body.style.color = "lightblue";
+                document.body.style.backgroundColor = "yellow"
+            }
+            if (this.value == 1) {
+                document.body.style.color = "lightblue";
+                document.body.style.backgroundColor = "blue"
+            }
+
+            // nacht effect maken met behulp van https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API en https://www.w3schools.com/cssref/pr_class_cursor.php//
+            if (this.value == 2) {
+                document.body.style.color = "lightblue";
+                document.body.style.backgroundColor = "green"
+            }
+        };
+    
+        console.log("schuif werkt!");
+
+
+    </script>
+</html>

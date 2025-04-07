@@ -5,24 +5,127 @@
         <link rel="stylesheet" href="css_portfolio.css">
         <!-- font download met behulp van:https://www.w3schools.com/css/css_font_google.asp -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+        <!--https://www.w3schools.com/icons/tryit.asp?filename=tryicons_fa-moon-o gebruikt voor icon gebruik-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
-
+              /*flashlight css voor bron kijk html*/
+              #flashlight {
+                --Xpos: 50vw;
+                --Ypos: 50vh;
+                position: fixed; /* Maak de flashlight absoluut en vast op het scherm */
+                top: 0;
+                left: 0;
+                right: 0; 
+                bottom: 0;
+                width: 150%;
+                height: 150%;
+                pointer-events: none;
+                z-index: 999; 
+                display: none;
+                margin-top: 0px;
+                margin-left: 0px;
+            }
+            #flashlight:before {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                background: radial-gradient(
+                    circle 10em at var(--Xpos) var(--Ypos),
+                    rgba(0,0,0,0),
+                    rgba(0,0,0,1)
+                );
+                pointer-events: none;
+            }
+            @media screen and (min-width: 800px) {
+                body {
+                    font-size: 24px;
+                }
+            }
         </style>
     </head>
     <body>
         <div class="kop">
+            <div id="flashlight"></div>
             <a href= Homepagina.html><img src="logo_tansparant.png" height="80px" width="200px" id="logo"></a>
             <div id = middenknoppenindekop>
-                <button>
+                <button class="buttonsgroter">
                     <a href= School.html>SCHOOL</a>
                 </button>
-                <button>
+                <button class="buttonsgroter">
                     <a href= Musical.html>MUSICAL</a>
                 </button>
-                <button>
+                <button class="buttonsgroter">
                     <a href= Contact.html>CONTACT</a>
                 </button>
             </div>
-        </div>
+            <div class="slidecontainer">
+                <input type="range" min="0" max="2" step="1" value="1" class="slider" id="myRange">
+                <p id="demo"></p>
+                <div class="containervooriconen">
+                    <!--https://www.w3schools.com/icons/-->
+                    <i class="iconochtend">&#9728;</i>
+                    <i class="iconmiddag">&#9728;</i>
+                    <i class="fa fa-moon-o" id="iconmaan" style="font-size:24px"></i>
+                    
+                </div>
+            </div>
+            </div>
     </body>
+    <script>
+        let schuif = document.getElementById("myRange");
+        let output = document.getElementById("demo");
+        
+
+        schuif.oninput = function() {
+            output.innerHTML = this.value;
+
+            let flashlight = document.getElementById("flashlight");
+            let iconmiddag = document.getElementsByClassName("iconmiddag")
+            let iconmaan = document.getElementsByClassName("iconmaan")
+            let iconochtend = document.getElementsByClassName("iconochtend")
+
+             if (this.value == 2) {
+        flashlight.style.display = "block";  // Maak de flashlight zichtbaar
+    } else {
+        flashlight.style.display = "none";  // Verberg de flashlight
+        
+    }
+
+    // Verander de achtergrondkleur van de pagina afhankelijk van de schuifwaarde
+    if (this.value == 0) {
+        document.body.style.backgroundColor = "#f2d675";
+         
+    } else if (this.value == 1) {
+        document.body.style.backgroundColor = "#F4F2ED"; 
+    }
+
+
+    if (this.value == 2) {
+        let mouseX = 0;
+        let mouseY = 0;
+
+        const isTouchDevice = () => {
+            try {
+                document.createEvent("TouchEvent");
+                return true;
+            } catch (e) {
+                return false;
+            }
+        };
+
+        function getMousePosition(e) {
+            mouseX = !isTouchDevice() ? e.pageX : e.touches[0].pageX;
+            mouseY = !isTouchDevice() ? e.pageY : e.touches[0].pageY;
+
+            flashlight.style.setProperty("--Xpos", mouseX + "px");
+            flashlight.style.setProperty("--Ypos", mouseY + "px");
+        }
+
+            document.addEventListener("mousemove", getMousePosition);
+            document.addEventListener("touchmove", getMousePosition);
+            };
+        };
+        </script>
 </html>

@@ -1,5 +1,5 @@
 body {
-    background-color: #427D71
+    background-color: #F4F2ED;
 }
 /* de kop word rond gemaakt door de code border-radius, dit is van de volgende website gehaalt: https://bobdewebbouwer.com/ronde-hoeken-css-3/ */
 /* ik liep op het probleem dat mijn afbeelding en knoppen niet goed werden uitgelijnd. om te vinden waar het probleem zat en om dit op te lossen heb ik copilet gebruikt, hieruit bleek dat ik de zelfde functies 
@@ -8,29 +8,42 @@ als bij #middenknoppenindekop kon gebruiken .*/
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #30545C;
+    background-color: #1F2D4E;
     width: auto; 
     border-radius: 40px; 
+    box-shadow: 7px 7px 5px gray;
+    height: 100px;
+   
 }
+/*schaduw gemaakt met hulp van https://www.codecenter.nl/pr/tutorial/css/css3_shadows*/
 div{
     margin: 5px;
     border-radius: 40px; 
+    font-family: "Oswald";
 }
 
 #logo {
-    margin-right:20px;
+    margin-left:20px;
+    margin-top: 15px;
     
 }
 /* om de buttons van de kop goed te plaatsen zijn de volgende paginas van w3schools gebruikt: w3schools.com/cssref/css_entities.php en https://www.w3schools.com/cssref/css3_pr_justify-content.php 
 en de lijn margin: 0 auto; komt van https://www.w3schools.com/css/css_margin.asp*/
 #middenknoppenindekop {
     margin: 0 auto;
-    margin-left: 400px;
+    margin-left: auto;
     width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
     width: auto;
+}
+/* met hulp van zeb en w3schools buttons https://www.w3schools.com/css/css3_transitions.asp , groter worden van de knoppen*/
+.buttonsgroter:hover {
+    transform: scale(1.2); 
+}
+.buttonsgroter {
+    transition: width 2s, height 2s, transform 2s;
 }
 
 button {
@@ -48,14 +61,250 @@ a:link {
     color: #DBDCD1;
     text-decoration: none;
   }
+  /*schaduw als je hovert met behulp van https://www.codecenter.nl/pr/tutorial/css/css3_shadows*/
   a:hover {
-    color: #C9E9F1;
+    color: #E0CD8B;
+    text-shadow: 4px 4px 8px black;
   }
   
 
+
+
+
+
+
+
+
+
+
+
+
+
+  
   /*css voor de homepagina*/
-  .vak1home {
-    background-color: #30545C;
-    width: auto; 
-    height: auto;
+  /* parent  gebruiken om divs goed uit te lijnen https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+  .parent1 { 
+        display: flex;
+        justify-content: space-between; 
+        
   }
+  .vak1home {
+    background-color: #4968B0;
+    width: 27%; 
+    height: 700px;
+    font-family: "Oswald";
+    margin-left: 15px;
+    margin-top: 10px;
+    box-shadow: 7px 7px 5px gray;
+  }
+  #blok1vak1home {
+    width: auto;
+    height: auto;
+    float: left;
+    margin-left: 2%;
+  }
+ /* het goed invullen gedaan met behulp van https://www.w3schools.com/cssref/pr_pos_overflow.php*/
+  .videotrailer {
+    background-color: #4968B0;
+    width: 70%; 
+    height: 700px;
+    font-family: "Oswald";
+    float: right;
+    overflow: hidden;
+    margin-top: 10px;
+    box-shadow: 7px 7px 5px gray;
+  }
+  .video-container video {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+  }
+  
+.onderbalk {
+  background-color: #DBDCD1;
+  width: 100%;
+  margin-top: 50px;
+  margin-left: 0px;
+  border-radius: 0px; 
+  height: 400px;
+  border-radius: 0px;
+}
+
+
+
+/*schuifknop */
+.slidecontainer{
+    justify-content: center;
+    margin-right: 15px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    float: right;
+   
+}
+.slider {
+  -webkit-appearance: none;  
+  appearance: none;
+  width: 100px; 
+  height: 25px; 
+  background: lightblue; 
+  -webkit-transition: 0.2s; 
+  transition: 0.2s;
+  border-radius: 34px;
+}
+
+
+
+.containervooriconen {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin: 0px; 
+  position: relative;
+  width: 100px; 
+}
+
+
+#demo {
+  display: none;
+}
+
+#iconmaan, .iconmiddag, .iconochtend {
+  font-size: 24px; 
+  margin: 0 0px; 
+  margin-right: 10px;
+}
+
+#iconmaan {
+  color: white;
+}
+
+.iconmiddag {
+  color: yellow;
+}
+
+.iconochtend {
+  color: lightblue;
+}
+
+
+
+
+
+/* schoolpagina */
+.fotoslider { 
+    background-color: #4968B0;
+    width: 90%; 
+    height: 700px;
+    font-family: "Oswald";
+    margin-left: 75px;
+    overflow: hidden;
+    margin-top: 50px;
+    box-shadow: 7px 7px 5px gray;
+    
+}
+.fotoslider2 { 
+  background-color: #4968B0;
+  width: 90%; 
+  height: 700px;
+  font-family: "Oswald";
+  margin-left: 75px;
+  overflow: hidden;
+  margin-top: 50px;
+  box-shadow: 7px 7px 5px gray;
+  
+}
+
+
+/*bron voor flex: https://www.w3schools.com/css/css3_flexbox.asp?utm_source=chatgpt.com*/
+
+.kunst{
+  background-color: #4968B0;
+  flex: 0 0 60%;
+  height: 700px;
+  font-family: "Oswald";
+  margin-left: 75px;
+  overflow: hidden;
+  margin-top: 50px;
+  box-shadow: 7px 7px 5px gray;
+  padding-left: 30px;
+}
+
+
+.kunstbloknaastkunstblok{
+  background-color: #4968B0;
+  flex: 0 0 22%;
+  height: 700px;
+  font-family: "Oswald";
+  margin-right: 5%;
+  overflow: hidden;
+  margin-top: 50px;
+  box-shadow: 7px 7px 5px gray;
+  padding-left: 30px;
+}
+
+.vwo_4{
+  background-color: #4968B0;
+  flex: 0 0 89%;
+  height: 700px;
+  font-family: "Oswald";
+  margin-left: 75px;
+  overflow: hidden;
+  margin-top: 50px;
+  box-shadow: 7px 7px 5px gray;
+  padding-left: 30px;
+}
+
+.vwo_5{
+  background-color: #4968B0;
+  flex: 0 0 89%;
+  height: 700px;
+  font-family: "Oswald";
+  margin-left: 75px;
+  overflow: hidden;
+  margin-top: 50px;
+  box-shadow: 7px 7px 5px gray;
+  padding-left: 30px;
+}
+
+.vwo_6{
+  background-color: #4968B0;
+  flex: 0 0 89%;
+  height: 700px;
+  font-family: "Oswald";
+  margin-left: 75px;
+  overflow: hidden;
+  margin-top: 50px;
+  box-shadow: 7px 7px 5px gray;
+  padding-left: 30px;
+}
+
+.PWS{
+  background-color: #4968B0;
+  flex: 0 0 60%;
+  height: 700px;
+  font-family: "Oswald";
+  margin-right: 5%;
+  overflow: hidden;
+  margin-top: 50px;
+  box-shadow: 7px 7px 5px gray;
+  padding-left: 30px;
+}
+
+
+.PWSbloknaastPWSblok{
+  background-color: #4968B0;
+  flex: 0 0 22%;
+  height: 700px;
+  font-family: "Oswald";
+  margin-left: 5%;
+  overflow: hidden;
+  margin-top: 50px;
+  box-shadow: 7px 7px 5px gray;
+  padding-left: 30px;
+}
+
+.parent2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+}
