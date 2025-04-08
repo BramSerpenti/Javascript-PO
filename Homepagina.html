@@ -50,17 +50,17 @@
     <body>
         <!--het maken van flash light bronhttps://www.youtube.com/watch?v=IR4YozVqI6k en hulp van copilet  -->
         <div id="flashlight"></div>
-
-        <div class="kop">
+    <div id = parentkop>
+        <div class="kop" id="kop">
             <a href= "Homepagina.html"><img src="logo_tansparant.png" height="80px" width="200px" id="logo"></a>
             <div id = middenknoppenindekop>
                 <button class="buttonsgroter" id = schoolbutton>
                     <a href= "School.html">SCHOOL</a>
                 </button>
-                <button class="buttonsgroter">
+                <button class="buttonsgroter" id = "musicalbutton">
                     <a href= "Musical.html">MUSICAL</a>
                 </button>
-                <button class="buttonsgroter">
+                <button class="buttonsgroter" id="contactbutton">
                     <a href= "Contact.html">CONTACT</a>
                 </button>
             </div>
@@ -74,12 +74,35 @@
                 <i class="fa fa-moon-o" id="iconmaan" style="font-size:24px"></i>
                 
             </div>
-        </div>
-        </div>    
-        <div class = ontzichtbaar1>
-            jeeeehhh ik ben zichtbaar
+            </div>
+        <div class = ontzichtbaar1 id="popup">
+
+            <!--bron om te verwijzen naar een pagina plaats: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a -->
+            <button id = Schoolinpopupbutton>
+                <a href= "School.html"><h3>School</h3></a>
+            </button><br>
+
+            <button id = kunstbutton>
+                <a href= "School.html#kunst"><h3>Kunst</h3></a>
+            </button><br>
+            
+
+
         </div>
 
+
+
+
+        <div class = ontzichtbaar2 id="popup2">
+            jeeeehhh ik ook
+        </div>
+        <div class = ontzichtbaar3 id="popup3">
+            jeeeehhh ik niet?
+        </div>
+
+
+        </div>
+    </div>
 
 
 
@@ -122,7 +145,50 @@
         };
         
         document.getElementById("schoolbutton").addEventListener("mouseover", divzicht);
-        document.getElementById("schoolbutton").addEventListener("mouseout", divniet);
+        document.getElementById("popup").addEventListener("mouseout", divniet);
+        document.getElementById("musicalbutton").addEventListener("mouseover", divniet);
+        document.getElementById("contactbutton").addEventListener("mouseover", divniet);
+        document.getElementById("kunstbutton").addEventListener("mouseover", divzicht);
+        document.getElementById("Schoolinpopupbutton").addEventListener("mouseover", divzicht);
+
+
+
+        let divuitkop2 = document.getElementsByClassName("ontzichtbaar2")[0];
+            divuitkop2.style.display = "none";
+        function divzicht2(){
+            divuitkop2.style.display = "block";
+        };
+        function divniet2(){
+            divuitkop2.style.display = "none";
+        };
+        
+        document.getElementById("musicalbutton").addEventListener("mouseover", divzicht2);
+        document.getElementById("popup2").addEventListener("mouseout", divniet2);
+        document.getElementById("schoolbutton").addEventListener("mouseover", divniet2);
+        document.getElementById("contactbutton").addEventListener("mouseover", divniet2);
+
+
+
+
+
+        let divuitkop3 = document.getElementsByClassName("ontzichtbaar3")[0];
+            divuitkop3.style.display = "none";
+        function divzicht3(){
+            divuitkop3.style.display = "block";
+        };
+        function divniet3(){
+            divuitkop3.style.display = "none";
+        };
+        
+        document.getElementById("contactbutton").addEventListener("mouseover", divzicht3);
+        document.getElementById("popup3").addEventListener("mouseout", divniet3);
+        document.getElementById("schoolbutton").addEventListener("mouseover", divniet3);
+        document.getElementById("musicalbutton").addEventListener("mouseover", divniet3);
+        
+
+
+        
+
             
 
 

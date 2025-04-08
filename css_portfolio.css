@@ -105,7 +105,7 @@ a:link {
   }
  /* het goed invullen gedaan met behulp van https://www.w3schools.com/cssref/pr_pos_overflow.php*/
   .videotrailer {
-    background-color: #4968B0;
+    background-color: #000000;
     width: 70%; 
     height: 700px;
     font-family: "Oswald";
@@ -312,9 +312,50 @@ a:link {
 
 
 .ontzichtbaar1{
-  height: "500px";
-  width: "60%";
-  background-color: #084ff4;
-  /*bron: https://www.w3schools.com/cssref/pr_pos_z-index.php*/
+  height: 500px;
+  width: 91%;
+  background-color: #1F2D4E;
+  /*bron: https://www.w3schools.com/cssref/pr_pos_z-index.php */
+  position: absolute;
   z-index: 1;
+  border-radius: 80px;
+  margin-top: 696px;
+  margin-left: 0%;
+  box-shadow: 7px 7px 5px rgb(0, 0, 0);
+  padding: 3%;
 }
+.ontzichtbaar2{
+  height: 500px;
+  width: 91%;
+  background-color: #1F2D4E;
+  /*bron: https://www.w3schools.com/cssref/pr_pos_z-index.php */
+  position: absolute;
+  z-index: 1;
+  border-radius: 80px;
+  margin-top: 696px;
+  margin-left: 0%;
+  box-shadow: 7px 7px 5px rgb(0, 0, 0);
+  padding: 3%;
+}
+.ontzichtbaar3{
+  height: 500px;
+  width: 91%;
+  background-color: #1F2D4E;
+  /*bron: https://www.w3schools.com/cssref/pr_pos_z-index.php */
+  position: absolute;
+  z-index: 1;
+  border-radius: 80px;
+  margin-top: 696px;
+  margin-left: 0%;
+  box-shadow: 7px 7px 5px rgb(0, 0, 0);
+  padding: 3%;
+}
+
+
+
+#parentkop {
+  height: auto;
+  width: auto;
+}
+
+
