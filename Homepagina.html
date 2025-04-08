@@ -50,10 +50,11 @@
     <body>
         <!--het maken van flash light bronhttps://www.youtube.com/watch?v=IR4YozVqI6k en hulp van copilet  -->
         <div id="flashlight"></div>
+
         <div class="kop">
             <a href= "Homepagina.html"><img src="logo_tansparant.png" height="80px" width="200px" id="logo"></a>
             <div id = middenknoppenindekop>
-                <button class="buttonsgroter">
+                <button class="buttonsgroter" id = schoolbutton>
                     <a href= "School.html">SCHOOL</a>
                 </button>
                 <button class="buttonsgroter">
@@ -75,7 +76,9 @@
             </div>
         </div>
         </div>    
-
+        <div class = ontzichtbaar1>
+            jeeeehhh ik ben zichtbaar
+        </div>
 
 
 
@@ -89,8 +92,8 @@
         <div class="videotrailer">
             
             <!-- https://www.w3schools.com/TAGs/att_video_autoplay.asp autoplay gefixt van w3schools met behulp van copilet want ik liep vast-->
-            <video width="119%" height="101%" controls autoplay muted playsinline>
-                <source src="" type="video/mp4">
+            <video width="100%" height="112%" controls autoplay muted playsinline>
+                <source src="trailer.bram.mp4" type="video/mp4">
               Your browser does not support the video tag.
               </video>
         </div>
@@ -99,12 +102,34 @@
         <div class="onderbalk">
             dit was mijn website
         </div>
-        
+       
 
-    
+        
         </body>
 
         <script>
+            //div zichtbaar maken//
+            //bronnen: http://www.sitemasters.be/forum/3/31966/JavaScript/div_laten_zien_en_verdwijnen  en //
+            // https://www.w3schools.com/js/js_htmldom_eventlistener.asp en zeb en Mnr Klose//
+
+            let divuitkop1 = document.getElementsByClassName("ontzichtbaar1")[0];
+            divuitkop1.style.display = "none";
+        function divzicht(){
+            divuitkop1.style.display = "block";
+        };
+        function divniet(){
+            divuitkop1.style.display = "none";
+        };
+        
+        document.getElementById("schoolbutton").addEventListener("mouseover", divzicht);
+        document.getElementById("schoolbutton").addEventListener("mouseout", divniet);
+            
+
+
+
+
+        //schuiver//
+
         let schuif = document.getElementById("myRange");
         let output = document.getElementById("demo");
         

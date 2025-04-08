@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <style>
+            .ontzichtbaar{
+                width: 100px;
+                height: 200px;
+                background: #d46666;
+                padding: 10px;
+                
+            }
+            
+        </style>
+    </head>
+    <body>
+        <button id="z">
+            zichtbaar
+        </button>
+        
+        <div class = ontzichtbaar>
+            ja de div is zichtbaar 
+        </div>
+    </body>
+    <script>
+        //bron:http://www.sitemasters.be/forum/3/31966/JavaScript/div_laten_zien_en_verdwijnen  en https://www.w3schools.com/js/js_htmldom_eventlistener.asp en zeb//
+        let a = document.getElementsByClassName("ontzichtbaar")[0];
+        a.style.display = "none";
+        function divzicht(){
+            a.style.display = "block";
+        };
+        function divniet(){
+            a.style.display = "none";
+        };
+        
+        document.getElementById("z").addEventListener("mouseover", divzicht);
+        document.getElementById("z").addEventListener("mouseout", divniet)
+        
+ </script>
+</html>
