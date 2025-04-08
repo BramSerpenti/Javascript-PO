@@ -113,6 +113,7 @@ a:link {
     overflow: hidden;
     margin-top: 10px;
     box-shadow: 7px 7px 5px gray;
+    border-radius: 75px; 
   }
   .video-container video {
     width: 100%;
@@ -307,4 +308,13 @@ a:link {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; 
+}
+
+
+.ontzichtbaar1{
+  height: "500px";
+  width: "60%";
+  background-color: #084ff4;
+  /*bron: https://www.w3schools.com/cssref/pr_pos_z-index.php*/
+  z-index: 1;
 }
