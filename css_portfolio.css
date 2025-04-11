@@ -325,27 +325,27 @@ a:link {
   padding: 3%;
 }
 .ontzichtbaar2{
-  height: 500px;
+  height: 300px;
   width: 91%;
   background-color: #1F2D4E;
   /*bron: https://www.w3schools.com/cssref/pr_pos_z-index.php */
   position: absolute;
   z-index: 1;
   border-radius: 80px;
-  margin-top: 696px;
+  margin-top: 495px;
   margin-left: 0%;
   box-shadow: 7px 7px 5px rgb(0, 0, 0);
   padding: 3%;
 }
 .ontzichtbaar3{
-  height: 500px;
+  height: 150px;
   width: 91%;
   background-color: #1F2D4E;
   /*bron: https://www.w3schools.com/cssref/pr_pos_z-index.php */
   position: absolute;
   z-index: 1;
   border-radius: 80px;
-  margin-top: 696px;
+  margin-top: 346px;
   margin-left: 0%;
   box-shadow: 7px 7px 5px rgb(0, 0, 0);
   padding: 3%;
@@ -359,3 +359,39 @@ a:link {
 }
 
 
+
+/*Musical */
+
+.monoloog {
+  background-color: #000000;
+    width: 90%; 
+    height: 700px;
+    font-family: "Oswald";
+    margin-left: 4.75%;
+    overflow: hidden;
+    margin-top: 10px;
+    box-shadow: 7px 7px 5px gray;
+    border-radius: 75px; 
+}
+
+#ervaring {
+  background-color: #4968B0;
+    width: 86%; 
+    height: 700px;
+    font-family: "Oswald";
+    margin-left: 4.75%;
+    margin-top: 10px;
+    box-shadow: 7px 7px 5px gray;
+    padding: 30px;
+}
+
+#contact1 {
+  background-color: #4968B0;
+  width: 86%; 
+  height: 700px;
+  font-family: "Oswald";
+  margin-left: 4.75%;
+  margin-top: 10px;
+  box-shadow: 7px 7px 5px gray;
+  padding: 30px;
+}
