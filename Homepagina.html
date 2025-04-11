@@ -49,62 +49,76 @@
     </head>
     <body>
         <!--het maken van flash light bronhttps://www.youtube.com/watch?v=IR4YozVqI6k en hulp van copilet  -->
-        <div id="flashlight"></div>
-    <div id = parentkop>
-        <div class="kop" id="kop">
-            <a href= "Homepagina.html"><img src="logo_tansparant.png" height="80px" width="200px" id="logo"></a>
+        <div class="kop" id ="kop">
+            <div id="flashlight"></div>
+            <a href= Homepagina.html><img src="logo_tansparant.png" height="80px" width="200px" id="logo"></a>
             <div id = middenknoppenindekop>
-                <button class="buttonsgroter" id = schoolbutton>
-                    <a href= "School.html">SCHOOL</a>
+                <button class="buttonsgroter" id = "schoolbutton">
+                    <a href= School.html>SCHOOL</a>
                 </button>
                 <button class="buttonsgroter" id = "musicalbutton">
-                    <a href= "Musical.html">MUSICAL</a>
+                    <a href= Musical.html>MUSICAL</a>
                 </button>
                 <button class="buttonsgroter" id="contactbutton">
-                    <a href= "Contact.html">CONTACT</a>
+                    <a href= Contact.html>CONTACT</a>
                 </button>
             </div>
-            <div class="slidecontainer">
-            <input type="range" min="0" max="2" step="1" value="1" class="slider" id="myRange">
-            <p id="demo"></p>
-            <div class="containervooriconen">
-                <!--https://www.w3schools.com/icons/-->
-                <i class="iconochtend">&#9728;</i>
-                <i class="iconmiddag">&#9728;</i>
-                <i class="fa fa-moon-o" id="iconmaan" style="font-size:24px"></i>
-                
+                <div class="slidecontainer">
+                    <input type="range" min="0" max="2" step="1" value="1" class="slider" id="myRange">
+                    <p id="demo"></p>
+                    <div class="containervooriconen">
+                        <!--https://www.w3schools.com/icons/-->
+                        <i class="iconochtend">&#9728;</i>
+                        <i class="iconmiddag">&#9728;</i>
+                        <i class="fa fa-moon-o" id="iconmaan" style="font-size:24px"></i>
+                        
+                    </div>
+                </div>
+                <div class = ontzichtbaar1 id="popup">
+
+                    <!--bron om te verwijzen naar een pagina plaats: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a -->
+                    <button id = Schoolinpopupbutton>
+                        <a href= "School.html"><h3>School</h3></a>
+                    </button><br>
+        
+        
+                    <button id = "kunstbutton">
+                        <a href= "School.html#kunst"><h3>Kunst:</h3></a>
+                    </button>
+        
+                    <button id = "vwo4button">
+                        <a href= "School.html#vwo_4"><h3>VWO 4</h3></a>
+                    </button>
+                    
+                    <button id = "vwo5button">
+                        <a href= "School.html#vwo_5"><h3>VWO 5</h3></a>
+                    </button>
+        
+                    <button id = "vwo6button">
+                        <a href= "School.html#vwo_6"><h3>VWO 6</h3></a>
+                    </button><br>
+                    <button id = "PWSbutton">
+                        <a href= "School.html#PWS"><h3>Profielwerkstuk</h3></a>
+                    </button><br>
+        
+                </div>
+
+                <div class = "ontzichtbaar2" id="popup2">
+                    <button id="musicalbutton2">
+                        <a href= "Musical.html"><h3>Musical</h3></a>
+                    </button><br>
+                    <button id="ervaringbutton">
+                        <a href= "Musical.html#ervaring"><h3>Ervaring</h3></a>
+                    </button>
+                </div>
+                <div class = "ontzichtbaar3" id="popup3">
+                    <button id="contactbutton2">
+                        <a href= "Contact.html"><h3>Contact</h3></a>
+                    </button>
+                </div>
+        
             </div>
-            </div>
-        <div class = ontzichtbaar1 id="popup">
-
-            <!--bron om te verwijzen naar een pagina plaats: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a -->
-            <button id = Schoolinpopupbutton>
-                <a href= "School.html"><h3>School</h3></a>
-            </button><br>
-
-            <button id = kunstbutton>
-                <a href= "School.html#kunst"><h3>Kunst</h3></a>
-            </button><br>
-            
-
-
         </div>
-
-
-
-
-        <div class = ontzichtbaar2 id="popup2">
-            jeeeehhh ik ook
-        </div>
-        <div class = ontzichtbaar3 id="popup3">
-            jeeeehhh ik niet?
-        </div>
-
-
-        </div>
-    </div>
-
-
 
         <div class="parent1">
         <div class="vak1home">
@@ -150,6 +164,10 @@
         document.getElementById("contactbutton").addEventListener("mouseover", divniet);
         document.getElementById("kunstbutton").addEventListener("mouseover", divzicht);
         document.getElementById("Schoolinpopupbutton").addEventListener("mouseover", divzicht);
+        document.getElementById("vwo4button").addEventListener("mouseover", divzicht);
+        document.getElementById("vwo5button").addEventListener("mouseover", divzicht);
+        document.getElementById("vwo6button").addEventListener("mouseover", divzicht);
+        document.getElementById("PWSbutton").addEventListener("mouseover", divzicht);
 
 
 
@@ -167,6 +185,8 @@
         document.getElementById("schoolbutton").addEventListener("mouseover", divniet2);
         document.getElementById("contactbutton").addEventListener("mouseover", divniet2);
 
+        document.getElementById("musicalbutton2").addEventListener("mouseover", divzicht2);
+        document.getElementById("ervaringbutton").addEventListener("mouseover", divzicht2);
 
 
 
@@ -185,6 +205,7 @@
         document.getElementById("schoolbutton").addEventListener("mouseover", divniet3);
         document.getElementById("musicalbutton").addEventListener("mouseover", divniet3);
         
+        document.getElementById("contactbutton2").addEventListener("mouseover", divzicht3);
 
 
         
