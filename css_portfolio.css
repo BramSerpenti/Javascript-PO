@@ -5,16 +5,42 @@ body {
 /* ik liep op het probleem dat mijn afbeelding en knoppen niet goed werden uitgelijnd. om te vinden waar het probleem zat en om dit op te lossen heb ik copilet gebruikt, hieruit bleek dat ik de zelfde functies 
 als bij #middenknoppenindekop kon gebruiken .*/
 .kop {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #1F2D4E;
-    width: auto; 
-    border-radius: 40px; 
-    box-shadow: 7px 7px 5px gray;
-    height: 100px;
-   
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 110px; 
+  z-index: 1000;
+  border-radius: 80px;
+  margin-left: 2%;
 }
+
+#achtergrondkop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1F2D4E;
+  z-index: 1;
+  transition: filter 0.3s ease;
+  border-radius: 80px;
+  box-shadow: 7px 7px 7px black;
+}
+
+#elementenindekop {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+#hulp{
+  height: 110px;
+}
+
 /*schaduw gemaakt met hulp van https://www.codecenter.nl/pr/tutorial/css/css3_shadows*/
 div{
     margin: 5px;
@@ -25,6 +51,7 @@ div{
 #logo {
     margin-left:20px;
     margin-top: 15px;
+    z-index: 2;
     
 }
 /* om de buttons van de kop goed te plaatsen zijn de volgende paginas van w3schools gebruikt: w3schools.com/cssref/css_entities.php en https://www.w3schools.com/cssref/css3_pr_justify-content.php 
@@ -37,6 +64,7 @@ en de lijn margin: 0 auto; komt van https://www.w3schools.com/css/css_margin.asp
     justify-content: center;
     align-items: center;
     width: auto;
+    z-index: 2;
 }
 /* met hulp van zeb en w3schools buttons https://www.w3schools.com/css/css3_transitions.asp , groter worden van de knoppen*/
 .buttonsgroter:hover {
@@ -140,6 +168,7 @@ a:link {
     margin-top: 30px;
     margin-bottom: 20px;
     float: right;
+    z-index: 2;
    
 }
 .slider {
@@ -201,6 +230,7 @@ a:link {
     overflow: hidden;
     margin-top: 50px;
     box-shadow: 7px 7px 5px gray;
+
     
 }
 .fotoslider2 { 
@@ -369,7 +399,7 @@ a:link {
     font-family: "Oswald";
     margin-left: 4.75%;
     overflow: hidden;
-    margin-top: 10px;
+    margin-top: 50px;
     box-shadow: 7px 7px 5px gray;
     border-radius: 75px; 
 }
@@ -391,7 +421,7 @@ a:link {
   height: 700px;
   font-family: "Oswald";
   margin-left: 4.75%;
-  margin-top: 10px;
+  margin-top: 50px;
   box-shadow: 7px 7px 5px gray;
   padding: 30px;
 }

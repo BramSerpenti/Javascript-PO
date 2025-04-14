@@ -43,10 +43,17 @@
                     font-size: 24px;
                 }
             }
+
+          
         </style>
     </head>
     <body>
         <div class="kop" id ="kop">
+            <div id="achtergrondkop">
+            </div>
+
+
+            <div id = elementenindekop>
             <div id="flashlight"></div>
             <a href= Homepagina.html><img src="logo_tansparant.png" height="80px" width="200px" id="logo"></a>
             <div id = middenknoppenindekop>
@@ -116,6 +123,15 @@
         
             </div>
         </div>
+        </div>
+
+
+
+
+
+
+
+        <div id="hulp"></div>
         <div class="monoloog">
             
             <!-- https://www.w3schools.com/TAGs/att_video_autoplay.asp autoplay gefixt van w3schools met behulp van copilet want ik liep vast-->
@@ -132,6 +148,30 @@
         </div>
     </body>
     <script>
+        // https://www.w3schools.com/css/css_positioning.asp en https://www.w3schools.com/jsref/event_onscroll.asp
+        //  en https://www.wegrow.design en https://www.w3schools.com/cssref/func_blur.php //
+        function kopbewegen() {
+                let achtergrondkop = document.getElementById("achtergrondkop");
+
+            if (window.scrollY > 0) {
+                
+                achtergrondkop.style.backgroundColor = "#accbef";
+                document.getElementById("popup").style.backgroundColor = "#accbef"; 
+                document.getElementById("popup2").style.backgroundColor = "#accbef"; 
+                document.getElementById("popup3").style.backgroundColor = "#accbef"; 
+            } else {
+               
+                achtergrondkop.style.backgroundColor = "#1F2D4E";
+                document.getElementById("popup").style.backgroundColor = "#1F2D4E"; 
+                document.getElementById("popup2").style.backgroundColor = "#1F2D4E"; 
+                document.getElementById("popup3").style.backgroundColor = "#1F2D4E"; 
+            }
+        };
+
+
+    
+        window.addEventListener("scroll", kopbewegen);
+
 
 
          //div zichtbaar maken//
