@@ -137,6 +137,12 @@
         <div id = "contact1">
             Mail en meer:
         </div>
+        <!--bron: https://mbo-sd.nl/lesson/javascript/html-js/element-content#:~:text=Je%20kan%20tekst%20ook%20aanpassen,met%20nieuwe%20tekst%20te%20plaatsen.-->
+        <div id="verjaardag" class = "leeftijd">
+            Mijn leeftijd is ......
+            <br>
+            ik ben jarig over zoveel dagen ......
+        </div>
         <div class="onderbalk">
             dit was mijn website
         </div>
@@ -307,5 +313,44 @@
             document.addEventListener("touchmove", getMousePosition);
             };
         };
+
+        // verjaardag en leeftijd en bron: https://mbo-sd.nl/lesson/javascript/html-js/element-content#:~:text=Je%20kan%20tekst%20ook%20aanpassen,met%20nieuwe%20tekst%20te%20plaatsen.//
+        // https://www.w3schools.com/js/js_dates.asp //
+        let tekst = document.querySelector('.leeftijd')
+        function verandertekst(){
+            let datum = new Date();
+            let geboortedatum = new Date(2007, 6, 5);
+
+            //controle//
+            console.log(Number(datum.getMonth())+1);
+            console.log(Number(datum.getFullYear()));
+            console.log(Number(datum.getDate()));
+
+            console.log(Number(geboortedatum.getMonth()));
+            console.log(Number(geboortedatum.getFullYear()));
+            console.log(Number(geboortedatum.getDate()));
+
+            // vandaag//
+            let maand = Number(datum.getMonth())+1;
+            let jaar = Number(datum.getFullYear());
+            let dag = Number(datum.getDate());
+
+            let geboortejaar = Number(geboortedatum.getFullYear());
+            let geboortemaand = Number(geboortedatum.getMonth());
+            let geboortedag = Number(geboortedatum.getDate());
+
+            
+        };
+        verandertekst();
+
+
+
+
+
+
+        console.log(tekst.textContent);
+
+
+
         </script>
 </html>

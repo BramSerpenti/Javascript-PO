@@ -425,3 +425,15 @@ a:link {
   box-shadow: 7px 7px 5px gray;
   padding: 30px;
 }
+
+
+#verjaardag {
+  background-color: #b1b5bd;
+  width: 86%; 
+  height: 50px;
+  font-family: "Oswald";
+  margin-left: 4.75%;
+  margin-top: 50px;
+  box-shadow: 7px 7px 5px gray;
+  padding: 30px;
+}
