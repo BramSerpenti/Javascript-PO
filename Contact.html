@@ -139,15 +139,23 @@
         </div>
         <!--bron: https://mbo-sd.nl/lesson/javascript/html-js/element-content#:~:text=Je%20kan%20tekst%20ook%20aanpassen,met%20nieuwe%20tekst%20te%20plaatsen.-->
         <div id="verjaardag" class = "leeftijd">
+            Funfact:
             <div id="leeftijd">
             Mijn leeftijd is ......
             </div>
+           
             <div id="dagenjarig">
             ik ben jarig over zoveel dagen ......
             </div>
+            <div id="taartkrijgen">
+                <button id="cadeuaclick" onclick="cadeuauitpakken()">
+                <img src = "cadeua.png" id="cadeua" width="5%">
+                </button>
+                <img src = "Taart.png" id="taart" width="5%">
+            </div>
         </div>
         <div class="onderbalk">
-            dit was mijn website
+            &#169; Bram Serpenti, Inc. Alle rechten voorbehouden
         </div>
     </body>
     <script>
@@ -390,8 +398,11 @@
             console.log(teller);
 
         let tekst2 = document.querySelector('#dagenjarig')
-        tekst2.textContent = "Ik ben over " + teller + " dagen jarig"
-           
+        tekst2.textContent = "Ik ben over " + teller + " dagen jarig"          
+
+        if (datum.getFullYear() == nieuweverjaardag.getFullYear() && datum.getMonth() == nieuweverjaardag.getMonth() && datum.getDate() == nieuweverjaardag.getDate()){
+            tekst2.textContent = "Ik ben JARIG!!!"
+        };
         };
         verandertekst1();
         verandertekst2();
@@ -399,6 +410,24 @@
          //controle//
          console.log(nieuweverjaardag);
         console.log(tekst.textContent);
+
+
+        
+        //cadeua uitpakken//
+        document.getElementById("taart").style.display = "none";
+        document.getElementById("cadeua").style.display = "none";
+
+        if (datum.getFullYear() == nieuweverjaardag.getFullYear() && datum.getMonth() == nieuweverjaardag.getMonth() && datum.getDate() == nieuweverjaardag.getDate()){
+            //controle//
+            console.log("je bent jarig!!");
+            document.getElementById("cadeua").style.display = "block";
+        };
+
+        function cadeuauitpakken(){
+            document.getElementById("taart").style.display = "block";
+            document.getElementById("cadeua").style.display = "none";
+        };
+
 
 
 
