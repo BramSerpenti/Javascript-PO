@@ -164,9 +164,10 @@
             </div>
             <div class = "fotoslider2">
             </div>
+            <div class="wisselaar"></div>
             </div>
             <div class="onderbalk">
-                dit was mijn website
+                &#169; Bram Serpenti, Inc. Alle rechten voorbehouden
             </div>
         </div>
     </body>
@@ -332,7 +333,7 @@
         };
            
         /*fotoslider*/
-        let fotos = ["oefenfoto1.jpg", "oefenfoto2.jpg", "oefenfoto3.jpg","oefenfoto4.jpg"];
+        let fotos = ["cobra.jpg", "wasko.jpg", "schooltekening.jpg","david.jpg", "citroen.jpg", "eindopdracht4.jpg"];
         let fotocontainer = document.getElementsByClassName("fotoslider")[0];//[0], omdat get elements by class name geeft altijd meerdere elementen bron: https://www.w3schools.com/jsref/met_element_getelementsbyclassname.asp?
         let a = 0;
     
@@ -351,21 +352,23 @@
 
 
         // fotoslider2//
-        let fotos2 = ["cobra.jpg", "wasko.jpg", "schooltekening.jpg","david.jpg", "citroen.jgp", "eindopdracht4.jgp"];
+        let fotos2 = ["cobra.jpg", "wasko.jpg", "schooltekening.jpg","david.jpg", "citroen.jpg", "eindopdracht4.jpg"];
         let fotocontainer2 = document.getElementsByClassName("fotoslider2")[0];//[0], omdat get elements by class name geeft altijd meerdere elementen bron: https://www.w3schools.com/jsref/met_element_getelementsbyclassname.asp?
-        let b = 0;
-    
-        fotocontainer2.style.backgroundImage = `url('${fotos2[1]}')`;
-        function fotoveranderen2(parameter) {
-            fotocontainer2.style.backgroundImage = `url('${fotos2[parameter]}')`;
-        };
-        // bron: https://www.w3schools.com/js/js_asynchronous.asp gevonden door chatgpt en beetje aangepast.//
-        setInterval(function () {
-        fotoveranderen2(b);
-        b++;
-        if (b >= fotos2.length) {
-        b = 0;
-        }
-        }, 3000); 
+        let wisselaar = document.getElementsByClassName("wisselaar")[0];
+
+
+        fotocontainer2.style.backgroundImage = `url('${fotos2[0]}')`;
+
+
+        for (let i = 0; i < fotos2.length; i++) {
+            let img = document.createElement("img");
+            img.src = fotos2[i];
+            img.alt = `Thumbnail ${i}`;
+            img.addEventListener("click", function () {
+                fotocontainer2.style.backgroundImage = `url('${fotos2[i]}')`;
+            });
+            wisselaar.appendChild(img);
+            };
+           
         </script>
 </html>
