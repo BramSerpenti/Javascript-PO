@@ -139,9 +139,12 @@
         </div>
         <!--bron: https://mbo-sd.nl/lesson/javascript/html-js/element-content#:~:text=Je%20kan%20tekst%20ook%20aanpassen,met%20nieuwe%20tekst%20te%20plaatsen.-->
         <div id="verjaardag" class = "leeftijd">
+            <div id="leeftijd">
             Mijn leeftijd is ......
-            <br>
+            </div>
+            <div id="dagenjarig">
             ik ben jarig over zoveel dagen ......
+            </div>
         </div>
         <div class="onderbalk">
             dit was mijn website
@@ -315,11 +318,44 @@
         };
 
         // verjaardag en leeftijd en bron: https://mbo-sd.nl/lesson/javascript/html-js/element-content#:~:text=Je%20kan%20tekst%20ook%20aanpassen,met%20nieuwe%20tekst%20te%20plaatsen.//
-        // https://www.w3schools.com/js/js_dates.asp //
-        let tekst = document.querySelector('.leeftijd')
-        function verandertekst(){
-            let datum = new Date();
-            let geboortedatum = new Date(2007, 6, 5);
+        // https://www.w3schools.com/js/js_dates.asp en https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date //
+        let tekst = document.querySelector('#leeftijd')
+
+
+        let datum = new Date();
+            let geboortedatum = new Date(2007, 5, 5);
+
+            
+            // vandaag//
+            let maand = Number(datum.getMonth())+1;
+            let jaar = Number(datum.getFullYear());
+            let dag = Number(datum.getDate());
+
+            let geboortejaar = Number(geboortedatum.getFullYear());
+            let geboortemaand = Number(geboortedatum.getMonth());
+            let geboortedag = Number(geboortedatum.getDate());
+            let leeftijdbram = jaar - geboortejaar;
+
+        function verandertekst1(){
+            
+
+            //validatie//
+            if (maand < geboortemaand){
+                leeftijdbram = leeftijdbram -1;
+                
+            };
+            if (maand = geboortemaand){
+                if (dag < geboortedag){
+                    leeftijdbram = leeftijdbram - 1;
+                };
+            };
+            
+            tekst.textContent = "Ik ben " + leeftijdbram + " jaar oud"
+
+
+
+            
+
 
             //controle//
             console.log(Number(datum.getMonth())+1);
@@ -330,24 +366,38 @@
             console.log(Number(geboortedatum.getFullYear()));
             console.log(Number(geboortedatum.getDate()));
 
-            // vandaag//
-            let maand = Number(datum.getMonth())+1;
-            let jaar = Number(datum.getFullYear());
-            let dag = Number(datum.getDate());
+            console.log(Number(leeftijdbram));
 
-            let geboortejaar = Number(geboortedatum.getFullYear());
-            let geboortemaand = Number(geboortedatum.getMonth());
-            let geboortedag = Number(geboortedatum.getDate());
+            
 
             
         };
-        verandertekst();
 
+        let nieuweverjaardag = new Date(datum.getFullYear(), 5, 5);
+        function verandertekst2(){
+            if (datum > nieuweverjaardag){
+                nieuweverjaardag.setFullYear(nieuweverjaardag.getFullYear()+1);
+            };
 
+            let telDatum = new Date(datum);
+            let teller = 0;
 
+        while (telDatum.toDateString() !== nieuweverjaardag.toDateString()) {
+            teller++;
+            telDatum.setDate(telDatum.getDate() + 1);
+            };
+            //controle//
+            console.log(teller);
 
+        let tekst2 = document.querySelector('#dagenjarig')
+        tekst2.textContent = "Ik ben over " + teller + " dagen jarig"
+           
+        };
+        verandertekst1();
+        verandertekst2();
 
-
+         //controle//
+         console.log(nieuweverjaardag);
         console.log(tekst.textContent);
 
 
