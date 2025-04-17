@@ -8,11 +8,12 @@
         <!--https://www.w3schools.com/icons/tryit.asp?filename=tryicons_fa-moon-o gebruikt voor icon gebruik-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
-              /*flashlight css voor bron kijk html*/
+              /*het maken van flash light bronhttps://www.youtube.com/watch?v=IR4YozVqI6k en hulp van copilet 
+              meer info en commentaar bij de homepagina*/
               #flashlight {
                 --Xpos: 50vw;
                 --Ypos: 50vh;
-                position: fixed; /* Maak de flashlight absoluut en vast op het scherm */
+                position: fixed; 
                 top: 0;
                 left: 0;
                 right: 0; 
@@ -20,8 +21,8 @@
                 width: 150%;
                 height: 150%;
                 pointer-events: none;
-                z-index: 999; 
-                display: none;
+                z-index: 999; /*zet flashlight op een hoger level zodat hij niet de andere elementen verandelrt*/
+                display: none;/*zorgt er voor dat het niet automatisch zichtbaar is als het niet word gestart*/
                 margin-top: 0px;
                 margin-left: 0px;
             }
@@ -32,13 +33,14 @@
                 height: 100%;
                 position: absolute;
                 background: radial-gradient(
-                    circle 10em at var(--Xpos) var(--Ypos),
+                    circle 10em at var(--Xpos) var(--Ypos), /* em is een einheid voor afstanden in dit geval dus de cirkel en background, 
+                    radial-gradient maakt de achtergrond voor de flashlight meer uitleggen in de video in de bron hierboven*/
                     rgba(0,0,0,0),
                     rgba(0,0,0,1)
                 );
                 pointer-events: none;
             }
-            @media screen and (min-width: 800px) {
+            @media screen and (min-width: 800px) {/*past alleen de volgende css toe als het scherm groter is als 800px weid*/
                 body {
                     font-size: 24px;
                 }
@@ -130,7 +132,7 @@
 
 
 
-
+        <!--hulp word gebruikt om de kop goed te posistioneren-->
         <div id="hulp"></div>
             </div>
         </div>
@@ -192,7 +194,7 @@
         //div zichtbaar maken//
             //bronnen: http://www.sitemasters.be/forum/3/31966/JavaScript/div_laten_zien_en_verdwijnen  en //
             // https://www.w3schools.com/js/js_htmldom_eventlistener.asp en zeb en Mnr Klose//
-
+            //variabelen aanmaken
             let divuitkop1 = document.getElementsByClassName("ontzichtbaar1")[0];
             divuitkop1.style.display = "none";
         function divzicht(){
@@ -214,7 +216,7 @@
         document.getElementById("PWSbutton").addEventListener("mouseover", divzicht);
 
 
-
+        //variabelen aanmaken
         let divuitkop2 = document.getElementsByClassName("ontzichtbaar2")[0];
             divuitkop2.style.display = "none";
         function divzicht2(){
@@ -233,7 +235,7 @@
         document.getElementById("ervaringbutton").addEventListener("mouseover", divzicht2);
 
 
-
+        //variabelen aanmaken
         let divuitkop3 = document.getElementsByClassName("ontzichtbaar3")[0];
             divuitkop3.style.display = "none";
         function divzicht3(){
@@ -268,9 +270,11 @@
 
 
 
+        //schuiver//
+        //het maken van flash light bron https://www.youtube.com/watch?v=IR4YozVqI6k en hulp van copilet //
 
 
-
+        //variabelen aanmaken
         let schuif = document.getElementById("myRange");
         let output = document.getElementById("demo");
         
@@ -300,6 +304,7 @@
 
 
     if (this.value == 2) {
+        //variabelen aanmaken
         let mouseX = 0;
         let mouseY = 0;
 

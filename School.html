@@ -8,7 +8,7 @@
         <!--https://www.w3schools.com/icons/tryit.asp?filename=tryicons_fa-moon-o gebruikt voor icon gebruik-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
-            /*flashlight css voor bron kijk html*/
+            /*het maken van flash light bron https://www.youtube.com/watch?v=IR4YozVqI6k en hulp van copilet  */
               #flashlight {
                 --Xpos: 50vw;
                 --Ypos: 50vh;
@@ -20,8 +20,8 @@
                 width: 150%;
                 height: 150%;
                 pointer-events: none;
-                z-index: 999; 
-                display: none;
+                z-index: 999; /*zet flashlight op een hoger level zodat hij niet de andere elementen verandelrt*/
+                display: none;/*zorgt er voor dat het niet automatisch zichtbaar is als het niet word gestart*/
                 margin-top: 0px;
                 margin-left: 0px;
             
@@ -33,13 +33,14 @@
                 height: 100%;
                 position: absolute;
                 background: radial-gradient(
-                    circle 10em at var(--Xpos) var(--Ypos),
+                    circle 10em at var(--Xpos) var(--Ypos), /* em is een einheid voor afstanden in dit geval dus de cirkel en background, 
+                    radial-gradient maakt de achtergrond voor de flashlight meer uitleggen in de video in de bron hierboven*/
                     rgba(0,0,0,0),
                     rgba(0,0,0,1)
                 );
                 pointer-events: none;
             }
-            @media screen and (min-width: 800px) {
+            @media screen and (min-width: 800px) {/*past alleen de volgende css toe als het scherm groter is als 800px weid*/
                 body {
                     font-size: 24px;
                 }
@@ -50,13 +51,14 @@
         </style>
     </head>
     <body>
-        <!--het maken van flash light bronhttps://www.youtube.com/watch?v=IR4YozVqI6k en hulp van copilet  -->
+        
         <div class="kop" id ="kop">
             <div id="achtergrondkop">
             </div>
 
 
             <div id = elementenindekop>
+            <!--het maken van flash light bronhttps://www.youtube.com/watch?v=IR4YozVqI6k en hulp van copilet  -->
             <div id="flashlight"></div>
             <a href= Homepagina.html><img src="logo_tansparant.png" height="80px" width="200px" id="logo"></a>
             <div id = middenknoppenindekop>
@@ -133,7 +135,7 @@
 
 
 
-
+        <!--hulp word gebruikt om de kop goed te posistioneren-->
         <div id="hulp"></div>
         <div class = "fotoslider">
         </div>
@@ -178,8 +180,9 @@
         // https://www.w3schools.com/css/css_positioning.asp en https://www.w3schools.com/jsref/event_onscroll.asp
         //  en https://www.wegrow.design en https://www.w3schools.com/cssref/func_blur.php //
             function kopbewegen() {
+                //variabelen aanmaken
                 let achtergrondkop = document.getElementById("achtergrondkop");
-
+            // if functie zorgt dat de kop zwart word als hij scrolt
             if (window.scrollY > 0) {
                 
                 achtergrondkop.style.backgroundColor = "black";
@@ -207,18 +210,18 @@
         //div zichtbaar maken//
             //bronnen: http://www.sitemasters.be/forum/3/31966/JavaScript/div_laten_zien_en_verdwijnen  en //
             // https://www.w3schools.com/js/js_htmldom_eventlistener.asp en zeb en Mnr Klose//
-
+            //variabelen aanmaken
             let divuitkop1 = document.getElementsByClassName("ontzichtbaar1")[0];
             divuitkop1.style.display = "none";
         function divzicht(){
-            divuitkop1.style.display = "block";
+            divuitkop1.style.display = "block";//block maakt zichtbaar
         };
         function divniet(){
-            divuitkop1.style.display = "none";
+            divuitkop1.style.display = "none";//none maakt ontzichtbaar
         };
         
         document.getElementById("schoolbutton").addEventListener("mouseover", divzicht);
-        document.getElementById("popup").addEventListener("mouseout", divniet);
+        document.getElementById("popup").addEventListener("mouseout", divniet);//zorgt er voor dat je de knoppen kan aanraken met muis, want zijn andere elementen
         document.getElementById("musicalbutton").addEventListener("mouseover", divniet);
         document.getElementById("contactbutton").addEventListener("mouseover", divniet);
 
@@ -232,7 +235,7 @@
     
 
 
-
+        //variabelen aanmaken
         let divuitkop2 = document.getElementsByClassName("ontzichtbaar2")[0];
             divuitkop2.style.display = "none";
         function divzicht2(){
@@ -252,7 +255,7 @@
 
 
 
-
+        //variabelen aanmaken
         let divuitkop3 = document.getElementsByClassName("ontzichtbaar3")[0];
             divuitkop3.style.display = "none";
         function divzicht3(){
@@ -277,14 +280,14 @@
 
 
 
-
+        //variabelen aanmaken
         let schuif = document.getElementById("myRange");
         let output = document.getElementById("demo");
         
 
         schuif.oninput = function() {
             output.innerHTML = this.value;
-
+            //variabelen aanmaken
             let flashlight = document.getElementById("flashlight");
             let iconmiddag = document.getElementsByClassName("iconmiddag")
             let iconmaan = document.getElementsByClassName("iconmaan")
@@ -307,6 +310,7 @@
 
 
     if (this.value == 2) {
+        //variabelen aanmaken
         let mouseX = 0;
         let mouseY = 0;
 
@@ -333,6 +337,7 @@
         };
            
         /*fotoslider*/
+        //variabelen aanmaken
         let fotos = ["cobra.jpg", "wasko.jpg", "schooltekening.jpg","david.jpg", "citroen.jpg", "eindopdracht4.jpg"];
         let fotocontainer = document.getElementsByClassName("fotoslider")[0];//[0], omdat get elements by class name geeft altijd meerdere elementen bron: https://www.w3schools.com/jsref/met_element_getelementsbyclassname.asp?
         let a = 0;
@@ -352,6 +357,7 @@
 
 
         // fotoslider2//
+        //variabelen aanmaken
         let fotos2 = ["cobra.jpg", "wasko.jpg", "schooltekening.jpg","david.jpg", "citroen.jpg", "eindopdracht4.jpg"];
         let fotocontainer2 = document.getElementsByClassName("fotoslider2")[0];//[0], omdat get elements by class name geeft altijd meerdere elementen bron: https://www.w3schools.com/jsref/met_element_getelementsbyclassname.asp?
         let wisselaar = document.getElementsByClassName("wisselaar")[0];

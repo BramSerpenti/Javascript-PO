@@ -6,12 +6,12 @@ body {
 als bij #middenknoppenindekop kon gebruiken .*/
 .kop {
   position: fixed;
-  top: 0;
+  top: 0;/*maakt de posistionering goed bron: https://developer.mozilla.org/en-US/docs/Web/CSS/top*/
   left: 0;
   width: 95%;
   height: 110px; 
-  z-index: 1000;
-  border-radius: 80px;
+  z-index: 1000;/*zet de kop op een hoger niveua om niet andere elementen aan te passen en over de andere te kunnen lapen*/
+  border-radius: 80px; /*maakt kop rond, bron https://www.w3schools.com/csSref/css3_pr_border-radius.php*/
   margin-left: 2%;
 }
 
@@ -36,7 +36,7 @@ als bij #middenknoppenindekop kon gebruiken .*/
   justify-content: space-between;
   padding: 0 20px;
 }
-
+/*hulp word gebruikt om de kop goed te posistioneren*/
 #hulp{
   height: 110px;
 }
@@ -165,7 +165,8 @@ a:link {
 
 
 
-/*schuifknop */
+/*schuifknop bron: https://www.w3schools.com/howto/howto_js_rangeslider.asp */
+
 .slidecontainer{
     justify-content: center;
     margin-right: 15px;
@@ -274,7 +275,7 @@ a:link {
   border-color: #333;
 }
 
-/*bron voor flex: https://www.w3schools.com/css/css3_flexbox.asp?utm_source=chatgpt.com*/
+/*bron voor flex: https://www.w3schools.com/css/css3_flexbox.asp?.com*/
 
 .kunst{
   background-color: #4968B0;

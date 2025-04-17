@@ -9,7 +9,7 @@
         <!--https://www.w3schools.com/icons/tryit.asp?filename=tryicons_fa-moon-o gebruikt voor icon gebruik-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
-            /*flashlight css voor bron <!--het maken van flash light bron https://www.youtube.com/watch?v=IR4YozVqI6k en hulp van copilet  */
+            /*het maken van flash light bron https://www.youtube.com/watch?v=IR4YozVqI6k en hulp van copilet  */
                 /*
                 --Xpos, is een costum variabel, zie je aan --, vw staat voor viewpoort witdh 1 vw = 1% dus 50 vw = 50%
                 --Ypos, zelfde als Xpos. deze worden rond regel 40 gebruikt, want anders doen ze niks. 
@@ -31,8 +31,8 @@
                 width: 150%;
                 height: 150%;
                 pointer-events: none;
-                z-index: 999; 
-                display: none;
+                z-index: 999; /*zet flashlight op een hoger level zodat hij niet de andere elementen verandelrt*/
+                display: none;/*zorgt er voor dat het niet automatisch zichtbaar is als het niet word gestart*/
                 margin-top: 0px;
                 margin-left: 0px;
             
@@ -51,16 +51,17 @@
                 );
                 pointer-events: none;
             }
-            @media screen and (min-width: 800px) {
+            @media screen and (min-width: 800px) {/*past alleen de volgende css toe als het scherm groter is als 800px weid*/
                 body {
                     font-size: 24px;
                 }
             }
-           
+           /*hulp word gebruikt om de kop goed te posistioneren en is hier anders want de homepagina is anders bij de 
+           andere paginas staat het in de externe css*/
             #hulp {
                 height: 125px;
             }
-
+            /*in dit bestand een aparte css voor de kop zodat hij alleen in deze pagina niet mee beweegt.*/
             #kop{
                 width: 98%;
                 margin-left: 0.25%;
@@ -70,14 +71,17 @@
         </style>
     </head>
     <body>
-        <!--het maken van flash light bronhttps://www.youtube.com/watch?v=IR4YozVqI6k en hulp van copilet  -->
+        
         <div class="kop" id ="kop">
+            <!--achtergrondkop gemaakt om voor en achtergrond te scheiden, voor de makelijk heid-->
             <div id="achtergrondkop">
             </div>
 
 
             <div id = elementenindekop>
+                <!--het maken van flash light bronhttps://www.youtube.com/watch?v=IR4YozVqI6k en hulp van copilet  -->
             <div id="flashlight"></div>
+            <!--van de afbeelding een link maken en door verwijzen naar de home pagina, zelfde geld voor de andere knoppen in de kop-->
             <a href= Homepagina.html><img src="logo_tansparant.png" height="80px" width="200px" id="logo"></a>
             <div id = middenknoppenindekop>
                 <button class="buttonsgroter" id = "schoolbutton">
@@ -90,7 +94,9 @@
                     <a href= Contact.html>CONTACT</a>
                 </button>
             </div>
-                <div class="slidecontainer">
+            <!-- aanmaak slider-->
+                <div class="slidecontainer"> <!--bron: https://www.w3schools.com/howto/howto_js_rangeslider.asp -->
+                    <!--bron voor de input: https://www.w3schools.com/tags/tag_input.asp -->
                     <input type="range" min="0" max="2" step="1" value="1" class="slider" id="myRange">
                     <p id="demo"></p>
                     <div class="containervooriconen">
@@ -153,7 +159,7 @@
 
 
 
-
+        <!--hulp word gebruikt om de kop goed te posistioneren-->
         <div id="hulp"></div>
 
         <div class="parent1">
@@ -262,6 +268,7 @@
 
 
         //schuiver//
+        //het maken van flash light bron https://www.youtube.com/watch?v=IR4YozVqI6k en hulp van copilet //
 
         let schuif = document.getElementById("myRange");
         let output = document.getElementById("demo");
@@ -276,13 +283,13 @@
             let iconochtend = document.getElementsByClassName("iconochtend")
 
              if (this.value == 2) {
-        flashlight.style.display = "block";  // Maak de flashlight zichtbaar
+        flashlight.style.display = "block";  // Maak de flashlight zichtbaar //
     } else {
-        flashlight.style.display = "none";  // Verberg de flashlight
+        flashlight.style.display = "none";  // Verberg de flashlight //
         
     }
 
-    // Verander de achtergrondkleur van de pagina afhankelijk van de schuifwaarde
+    // Verander de achtergrondkleur van de pagina afhankelijk van de schuifwaarde //
     if (this.value == 0) {
         document.body.style.backgroundColor = "#f2d675";
          
