@@ -287,19 +287,21 @@ a:link {
   margin-top: 50px;
   box-shadow: 7px 7px 5px gray;
   padding-left: 30px;
+  padding-right: 30px;
 }
 
 
 .kunstbloknaastkunstblok{
   background-color: #4968B0;
   flex: 0 0 22%;
-  height: 700px;
+  height: 685px;
   font-family: "Oswald";
   margin-right: 5%;
   overflow: hidden;
   margin-top: 50px;
   box-shadow: 7px 7px 5px gray;
   padding-left: 30px;
+  padding-top: 1%
 }
 
 .vwo_4{
@@ -354,13 +356,14 @@ a:link {
 .PWSbloknaastPWSblok{
   background-color: #4968B0;
   flex: 0 0 22%;
-  height: 700px;
+  height: 675px;
   font-family: "Oswald";
   margin-left: 5%;
   overflow: hidden;
   margin-top: 50px;
   box-shadow: 7px 7px 5px gray;
   padding-left: 30px;
+  padding:1%
 }
 
 .parent2 {
@@ -447,7 +450,7 @@ a:link {
 #contact1 {
   background-color: #4968B0;
   width: 86%; 
-  height: 700px;
+  height: 100px;
   font-family: "Oswald";
   margin-left: 4.75%;
   margin-top: 50px;
