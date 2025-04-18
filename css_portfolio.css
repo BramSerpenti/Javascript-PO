@@ -17,13 +17,12 @@ als bij #middenknoppenindekop kon gebruiken .*/
 
 #achtergrondkop {
   position: absolute;
-  top: 0;
+  top: 0;/*relative positie tegenover de andere elementen.*/
   left: 0;
   width: 100%;
   height: 100%;
   background-color: #1F2D4E;
   z-index: 1;
-  transition: filter 0.3s ease;
   border-radius: 80px;
   box-shadow: 7px 7px 7px black;
 }
@@ -33,7 +32,7 @@ als bij #middenknoppenindekop kon gebruiken .*/
   z-index: 2;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* zorgt voor de ruimte tussen de elementen in de kop, https://www.w3schools.com/cssref/css3_pr_justify-content.php */
   padding: 0 20px;
 }
 /*hulp word gebruikt om de kop goed te posistioneren*/
@@ -62,7 +61,7 @@ en de lijn margin: 0 auto; komt van https://www.w3schools.com/css/css_margin.asp
     width: 20%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; /* https://www.w3schools.com/cssref/css3_pr_align-items.php */
     width: auto;
     z-index: 2;
 }
@@ -147,7 +146,7 @@ a:link {
   .video-container video {
     width: 100%;
     height: 100%; 
-    object-fit: cover; 
+    object-fit: cover; /* https://www.w3schools.com/css/css3_object-fit.asp */
   }
   
 .onderbalk {
@@ -182,7 +181,7 @@ a:link {
   width: 100px; 
   height: 25px; 
   background: lightblue; 
-  -webkit-transition: 0.2s; 
+  -webkit-transition: 0.2s; /* https://www.cascadingstylesheets.nl/transition-duration/ */
   transition: 0.2s;
   border-radius: 34px;
 }
@@ -225,7 +224,8 @@ a:link {
 
 
 
-/* schoolpagina  en bron https://developer.mozilla.org/en-US/docs/Web/CSS/background-size*/
+/* schoolpagina  en bron https://www.w3schools.com/cssref/pr_background-position.php 
+background center en no repeat gebruikt om foto's in foto slider goed vorm te geven */
 .fotoslider { 
     background-color: #4968B0;
     width: 90%; 
@@ -236,7 +236,7 @@ a:link {
     margin-top: 50px;
     box-shadow: 7px 7px 5px gray;
     background-size: cover; 
-  background-position: center;
+  background-position: center; 
   background-repeat: no-repeat;
 
     
@@ -257,7 +257,7 @@ a:link {
 
 .wisselaar {
   display: flex;
-  gap: 10px;
+  gap: 10px; /* https://www.w3schools.com/cssref/css3_pr_gap.php */
   margin-top: 10px;
   margin-left: 5%;
   width: 90%;
